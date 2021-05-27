@@ -67,13 +67,14 @@ export default class TransactionScreen extends React.Component {
               <Image
               source={require("../assets/booklogo.jpg")}
               style={{width:200,height:200}}/>
+              <Text style={{textAlign:'center',fontSize:30}}>Wily</Text>
             </View>
             <View style={styles.inputView}>
               <TextInput style={styles.inputBox}
               placeholder="Book Id"
               value={this.state.scannedBookId}/>
                <TouchableOpacity
-            onPress={this.getCameraPermissions("BookId")}
+            onPress={()=>{this.getCameraPermissions("BookId")}}
             style={styles.scanButton}>
             <Text style={styles.buttonText}>Scan</Text>
           </TouchableOpacity>
@@ -83,7 +84,7 @@ export default class TransactionScreen extends React.Component {
               placeholder="Student Id"
               value={this.state.scannedStudentId}/>
           <TouchableOpacity
-            onPress={this.getCameraPermissions("StudentId")}
+            onPress={()=>{this.getCameraPermissions("StudentId")}}
             style={styles.scanButton}>
             <Text style={styles.buttonText}>Scan</Text>
           </TouchableOpacity>

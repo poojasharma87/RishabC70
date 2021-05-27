@@ -19,7 +19,7 @@ const TabNavigator = createBottomTabNavigator({
 {
   defaultNavigationOptions:({navigation})=>({
     tabBarIcon:({})=>{
-      const routeName=navigation.state.rootName
+      const routeName=navigation.state.routeName
       if (routeName==='Transaction') {
         return(
           <Image
